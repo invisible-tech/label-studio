@@ -144,7 +144,7 @@ export const ProjectsPage = () => {
 };
 
 ProjectsPage.title = "Projects";
-ProjectsPage.path = "/projects";
+ProjectsPage.path = "/manage/projects";
 ProjectsPage.exact = true;
 ProjectsPage.routes = ({ store }) => [
   {
@@ -154,7 +154,7 @@ ProjectsPage.routes = ({ store }) => [
     component: () => {
       const params = useRouterParams();
 
-      return <Redirect to={`/projects/${params.id}/data`} />;
+      return <Redirect to={`/manage/projects/${params.id}/data`} />;
     },
     pages: {
       DataManagerPage,

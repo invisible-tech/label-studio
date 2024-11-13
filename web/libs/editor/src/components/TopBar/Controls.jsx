@@ -200,7 +200,7 @@ export const Controls = controlsInjector(
                 store.updateAnnotation();
               }}
             >
-              {isUpdate ? "Update" : "Submit"}
+              {isUpdate ? "Update  bbb" : "Submit"}
             </Button>
           </ButtonTooltip>
         );

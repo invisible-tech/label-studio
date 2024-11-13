@@ -1,5 +1,6 @@
 import { ProjectsPage } from "./Projects/Projects";
-import { OrganizationPage } from "./Organization";
-import { ModelsPage } from "./Organization/Models/ModelsPage";
+import { TasksPage } from "./Tasks/Tasks";
+import { OrganizationPage } from "./Manage/Organization";
+import { ModelsPage } from "./Manage/Organization/Models/ModelsPage";
 
-export const Pages = [ProjectsPage, OrganizationPage, ModelsPage];
+export const Pages = [ProjectsPage, OrganizationPage, ModelsPage, TasksPage];

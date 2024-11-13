@@ -53,7 +53,8 @@ _api_urlpatterns_templates = [
 
 
 urlpatterns = [
-    path('projects/', include(_urlpatterns)),
+    path('manage/projects/', include(_urlpatterns)),
+    path('tasks/', include(_urlpatterns)),
     path('api/projects/', include((_api_urlpatterns, app_name), namespace='api')),
     path('api/templates/', include((_api_urlpatterns_templates, app_name), namespace='api-templates')),
 ]

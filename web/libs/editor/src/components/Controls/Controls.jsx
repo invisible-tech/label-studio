@@ -98,7 +98,7 @@ export default inject("store")(
               onClick={store.updateAnnotation}
               className={updateButtonClassName}
             >
-              {sentUserGenerate || versions.result ? "Update" : "Submit"} {buttons.update}
+              {sentUserGenerate || versions.result ? "Update aaa" : "Submit"} {buttons.update}
             </Button>
           </Tooltip>
         );

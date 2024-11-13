@@ -46,7 +46,7 @@ export const DangerZone = () => {
               pk: project.id,
             },
           });
-          history.replace("/projects");
+          history.replace("/manage/projects");
         }
         setProcessing(null);
       },

@@ -24,5 +24,4 @@ _api_urlpatterns = [
 urlpatterns = [
     path('api/projects/', include((_api_urlpatterns, app_name), namespace='api-projects')),
     path('api/auth/export/', api.ProjectExportFilesAuthCheck.as_view(), name='project-export-files-auth-check'),
-    # path('api/auth/exports/', api.ExportListAPI.as_view(), name='api-exports'),
 ]

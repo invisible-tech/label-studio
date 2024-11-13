@@ -56,7 +56,7 @@ const initializeDataManager = async (root, props, params) => {
 };
 
 const buildLink = (path, params) => {
-  return generatePath(`/projects/:id${path}`, params);
+  return generatePath(`/manage/projects/:id${path}`, params);
 };
 
 export const DataManagerPage = ({ ...props }) => {
@@ -122,7 +122,7 @@ export const DataManagerPage = ({ ...props }) => {
       const target = route.replace(/^projects/, "");
 
       if (target) history.push(buildLink(target, { id: params.id }));
-      else history.push("/projects/");
+      else history.push("/manage/projects/");
     });
 
     if (interactiveBacked) {
@@ -201,7 +201,7 @@ export const DataManagerPage = ({ ...props }) => {
     <Block name="crash">
       <Elem name="info">Project was deleted or not yet created</Elem>
 
-      <Button to="/projects">Back to projects</Button>
+      <Button to="/manage/projects">Back to projects</Button>
     </Block>
   ) : (
     <Block ref={root} name="datamanager" />
@@ -290,7 +290,7 @@ DataManagerPage.context = ({ dmRef }) => {
       )}
 
       {Object.entries(links).map(([path, label]) => (
-        <Button key={path} tag={NavLink} size="compact" to={`/projects/${project.id}${path}`} data-external>
+        <Button key={path} tag={NavLink} size="compact" to={`/manage/projects/${project.id}${path}`} data-external>
           {label}
         </Button>
       ))}

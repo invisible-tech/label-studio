@@ -25,7 +25,7 @@ import { VersionNotifier, VersionProvider } from "../VersionNotifier/VersionNoti
 import "./Menubar.scss";
 import "./MenuContent.scss";
 import "./MenuSidebar.scss";
-import { ModelsPage } from "../../pages/Organization/Models/ModelsPage";
+import { ModelsPage } from "../../pages/Manage/Organization/Models/ModelsPage";
 import { FF_DIA_835, isFF } from "../../utils/feature-flags";
 
 export const MenubarContext = createContext();
@@ -132,7 +132,7 @@ export const Menubar = ({ enabled, defaultOpened, defaultPinned, children, onSid
         <div className={menubarClass}>
           <Dropdown.Trigger dropdown={menuDropdownRef} closeOnClickOutside={!sidebarPinned}>
             <div className={`${menubarClass.elem("trigger")} main-menu-trigger`}>
-              <img src={absoluteURL("/static/icons/logo.svg")} alt="Label Studio Logo" height="22" />
+              <img src={absoluteURL("/static/icons/inv-workplace.svg")} alt="Label Studio Logo" height="22" />
               <Hamburger opened={sidebarOpened} />
             </div>
           </Dropdown.Trigger>
@@ -183,8 +183,8 @@ export const Menubar = ({ enabled, defaultOpened, defaultPinned, children, onSid
               style={{ width: 240 }}
             >
               <Menu>
-                <Menu.Item label="Projects" to="/projects" icon={<IconFolder />} data-external exact />
-                <Menu.Item label="Organization" to="/organization" icon={<IconPersonInCircle />} data-external exact />
+                <Menu.Item label="Projects" to="/manage/projects" icon={<IconFolder />} data-external exact />
+                <Menu.Item label="Organization" to="/manage/organization" icon={<IconPersonInCircle />} data-external exact />
                 {isFF(FF_DIA_835) && <Menu.Item label="Models" to={ModelsPage.path} icon={<IconModel />} exact />}
 
                 <Menu.Spacer />

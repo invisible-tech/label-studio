@@ -63,7 +63,7 @@ const ProjectCard = ({ project }) => {
   }, [color]);
 
   return (
-    <Elem tag={NavLink} name="link" to={`/projects/${project.id}/data`} data-external>
+    <Elem tag={NavLink} name="link" to={`/manage/projects/${project.id}/data`} data-external>
       <Block name="project-card" mod={{ colored: !!color }} style={projectColors}>
         <Elem name="header">
           <Elem name="title">
@@ -79,8 +79,8 @@ const ProjectCard = ({ project }) => {
               <Dropdown.Trigger
                 content={
                   <Menu contextual>
-                    <Menu.Item href={`/projects/${project.id}/settings`}>Settings</Menu.Item>
-                    <Menu.Item href={`/projects/${project.id}/data?labeling=1`}>Label</Menu.Item>
+                    <Menu.Item href={`/manage/projects/${project.id}/settings`}>Settings</Menu.Item>
+                    <Menu.Item href={`/manage/projects/${project.id}/data?labeling=1`}>Label</Menu.Item>
                   </Menu>
                 }
               >

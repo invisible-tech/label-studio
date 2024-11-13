@@ -21,7 +21,7 @@ const Webhook = () => {
   const { project } = useProject();
 
   const projectId = useMemo(() => {
-    if (history.location.pathname.startsWith("/projects")) {
+    if (history.location.pathname.startsWith("/manage/projects")) {
       if (Object.keys(project).length === 0) {
         return null;
       }

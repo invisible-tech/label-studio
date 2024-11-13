@@ -133,7 +133,7 @@ export const CreateProject = ({ onClose }) => {
     setWaitingStatus(false);
 
     if (response !== null) {
-      history.push(`/projects/${response.id}/data`);
+      history.push(`/manage/projects/${response.id}/data`);
     }
   }, [project, projectBody, finishUpload]);
 
@@ -163,7 +163,7 @@ export const CreateProject = ({ onClose }) => {
         },
       });
     setWaitingStatus(false);
-    history.replace("/projects");
+    history.replace("/manage/projects");
     onClose?.();
   }, [project]);
 

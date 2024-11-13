@@ -214,7 +214,7 @@ export const Controls = controlsInjector<{ annotation: MSTAnnotation }>(
               onClickMethod();
             }}
           >
-            {`${isUpdate ? "Update" : "Submit"} and exit`}
+            {`${isUpdate ? "Update zz" : "Submit"} and exit`}
           </Button>
         );
       };
@@ -276,9 +276,11 @@ export const Controls = controlsInjector<{ annotation: MSTAnnotation }>(
                 if ((event.target as HTMLButtonElement).classList.contains(dropdownTrigger)) return;
                 const selected = store.annotationStore?.selected;
 
-                selected?.submissionInProgress();
+                await selected?.submissionInProgress();
                 await store.commentStore.commentFormSubmit();
-                store.updateAnnotation();
+                await store.updateAnnotation();
+
+                window.close()
               }}
               icon={
                 useExitOption ? (

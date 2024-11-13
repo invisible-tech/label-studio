@@ -8,7 +8,7 @@ const ProjectLink = ({ project }) => {
   };
 
   return (
-    <a href={`/projects/${projectID}/data`} onClick={onClick}>
+    <a href={`/manage/projects/${projectID}/data`} onClick={onClick}>
       {project.title}
     </a>
   );
