@@ -66,6 +66,12 @@
     "decorators": ""
   },
   {
+    "url": "/auth/",
+    "module": "core.views.serve_file",
+    "name": "auth:fake-auth",
+    "decorators": ""
+  },
+  {
     "url": "/people/",
     "module": "organizations.views.organization_people_list",
     "name": "organizations:organization-index",

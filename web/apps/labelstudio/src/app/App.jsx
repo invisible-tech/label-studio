@@ -55,14 +55,14 @@ const App = ({ content }) => {
     <ErrorBoundary>
       <Router history={browserHistory}>
         <MultiProvider
-          providers={[
-            <AuthProvider key='auth-provider' />,
+          providers={[            
             <AppStoreProvider key="app-store" />,
             <ApiProvider key="api" />,
             <ConfigProvider key="config" />,
             <RoutesProvider key="rotes" />,
             <ProjectProvider key="project" />,
             <ToastProvider key="toast" />,
+            <AuthProvider key='auth-provider' />,
           ]}
         >
           <AsyncPage>

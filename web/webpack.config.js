@@ -29,6 +29,8 @@ const LOCAL_ENV = {
   NODE_ENV: mode,
   CSS_PREFIX: css_prefix,
   RELEASE_NAME: RELEASE,
+  ADMIN_USERNAME: process.env.ADMIN_USERNAME,
+  ADMIN_PASSWORD: process.env.ADMIN_PASSWORD
 };
 
 const BUILD = {

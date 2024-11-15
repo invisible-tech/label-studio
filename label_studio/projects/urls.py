@@ -8,7 +8,7 @@ app_name = 'projects'
 
 # reverse for projects:name
 _urlpatterns = [
-    path('', views.project_list, name='project-index'),
+    path('', views.project_list, name='project-index'),    
     path('<int:pk>/settings/', views.project_settings, name='project-settings', kwargs={'sub_path': ''}),
     path('<int:pk>/settings/<sub_path>', views.project_settings, name='project-settings-anything'),
     path('upload-example/', views.upload_example_using_config, name='project-upload-example-using-config'),
@@ -53,7 +53,9 @@ _api_urlpatterns_templates = [
 
 
 urlpatterns = [
+    path('manage/', include(_urlpatterns)),
     path('manage/projects/', include(_urlpatterns)),
+    path('auth/', include(_urlpatterns)),
     path('tasks/', include(_urlpatterns)),
     path('api/projects/', include((_api_urlpatterns, app_name), namespace='api')),
     path('api/templates/', include((_api_urlpatterns_templates, app_name), namespace='api-templates')),
